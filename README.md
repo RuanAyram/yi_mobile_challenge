@@ -42,7 +42,7 @@ rails s
 ### Events
 
 | Method + url | Output |
-| :----------: |:------:|
+| :----------- |:-------|
 | GET http://localhost:3000/api/v1/events | Returns a list of all events in the database |
 | POST http://localhost:3000/api/v1/events | Body JSON format (required), example below |
  ```javascript
@@ -59,7 +59,7 @@ rails s
 ### Comments
 
 | Method + url | Output |
-| :----------: |:------:|
+| :----------- |:-------|
 | GET http://localhost:3000/api/v1/comments | Returns a list of all comments in the database |
 | GET http://localhost:3000/api/v1/comments?flagged=true | Returns a list of all flagged comments in database |
 | POST http://localhost:3000/api/v1/comments | Body JSON format (required), example below |
