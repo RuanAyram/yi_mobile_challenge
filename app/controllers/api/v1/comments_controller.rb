@@ -5,11 +5,11 @@ class Api::V1::CommentsController < ApplicationController
 
   # GET /api/v1/comments
   def index
-    if params[:flagged] == 'true'
-      @comments = Comment.flagged
-    else
-      @comments = Comment.all
-    end
+    @comments = if params[:flagged] == 'true'
+                  Comment.flagged
+                else
+                  Comment.all
+                end
     render json: { comments: @comments, status: :ok }
   end
 

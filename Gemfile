@@ -40,6 +40,9 @@ group :development, :test do
   # Default testing framework
   gem 'rspec-rails', '~> 3.8'
 
+  # Setting up Ruby objects as test data
+  gem 'factory_bot_rails'
+
   # Simple one-liner tests
   gem 'shoulda-matchers', '~> 3.1'
 end

@@ -2,7 +2,11 @@
 
 require 'rails_helper'
 
-RSpec.describe "Event", type: :request do
+RSpec.describe 'Event', type: :request do
+  before(:all) do
+    @event1 = create(:event)
+  end
+
   describe 'GET index' do
     it 'returns http status 200 (ok)' do
       get api_v1_events_path
@@ -12,7 +16,7 @@ RSpec.describe "Event", type: :request do
 
   describe 'POST create' do
     it 'creates a event' do
-      post api_v1_events_path, params: { event: { name: 'My Event', description: 'One description', lat: -5.035264, lng: -42.8413766 } }
+      post api_v1_events_path, params: { event: attributes_for(:event) }
       expect(response).to have_http_status(:created)
     end
   end

@@ -3,6 +3,10 @@
 require 'rails_helper'
 
 RSpec.describe 'Comment', type: :request do
+  before(:all) do
+    @comment1 = create(:comment)
+  end
+
   describe 'GET index' do
     it 'returns http status 200 (ok)' do
       get api_v1_comments_path
@@ -19,7 +23,7 @@ RSpec.describe 'Comment', type: :request do
 
   describe 'POST create with correct params' do
     it 'creates a comment' do
-      post api_v1_comments_path, params: { comment: { text: 'My comment', user_id: User.first.id, event_id: Event.first.id } }
+      post api_v1_comments_path, params: { comment: attributes_for(:comment) }
       expect(response).to have_http_status(:created)
     end
   end
