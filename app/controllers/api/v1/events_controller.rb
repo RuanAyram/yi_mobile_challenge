@@ -18,9 +18,9 @@ class Api::V1::EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     if @event.save
-      render json: { event: @event, status: :created }
+      render json: @event, status: :created
     else
-      render json: { event_error: @event.errors, status: :unprocessable_entity }
+      render json: @event.errors, status: :unprocessable_entity
     end
   end
 
@@ -29,7 +29,7 @@ class Api::V1::EventsController < ApplicationController
     if @event.update(event_params)
       render json: { event: @event, status: :ok }
     else
-      render json: { event_error: @event.errors, status: :unprocessable_entity }
+      render json: @event.errors, status: :unprocessable_entity
     end
   end
 

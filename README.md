@@ -26,6 +26,8 @@ Clone the repository
 git clone https://github.com/RuanAyram/yi_mobile_challenge
 ```
 
+#### Edit `config/database.yml`, if necessary
+
 Enter in the folder, then run these commands to install gems, create a database and populate, then run api locally
 ```
 cd yi_mobile_challenge
@@ -74,6 +76,7 @@ rails s
  ```
 
 ## For test, run:
- ```
-  bundle exec rspec
- ```
+
+```
+ $ bundle exec rspec
+```

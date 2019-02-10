@@ -10,7 +10,7 @@
 
 # My locations
 my_locations = {
-  encontro_dos_rios: { lat: -5.035264,lng: -42.8413766},
+  encontro_dos_rios: { lat: -5.035264, lng: -42.8413766},
   potycabana: { lat: -5.0845239, lng: -42.7947056 },
   theresina_hall: { lat: -5.0608837, lng: -42.8076101 }
 }
