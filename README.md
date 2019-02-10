@@ -40,10 +40,11 @@ rails s
 ## My API Endpoints
 
 ### Events
-> GET http://localhost:3000/api/v1/events
- - returns a list of all events in the database
-> POST http://localhost:3000/api/v1/events
- - Body JSON format (required)
+
+| Method + url | Output |
+| :----------: |:------:|
+| GET http://localhost:3000/api/v1/events | Returns a list of all events in the database |
+| POST http://localhost:3000/api/v1/events | Body JSON format (required), example below |
  ```javascript
 {
   "event": {
@@ -53,25 +54,24 @@ rails s
     "lng": -43.0643717
   }
 }
-  ```
+ ```
 
 ### Comments
-> GET http://localhost:3000/api/v1/comments
-  - returns a list of all comments in the database
-> GET http://localhost:3000/api/v1/comments?flagged=true
-  - returns a list of all flagged comments in database
-> POST http://localhost:3000/api/v1/comments
- - Body JSON format (required)
+
+| Method + url | Output |
+| :----------: |:------:|
+| GET http://localhost:3000/api/v1/comments | Returns a list of all comments in the database |
+| GET http://localhost:3000/api/v1/comments?flagged=true | Returns a list of all flagged comments in database |
+| POST http://localhost:3000/api/v1/comments | Body JSON format (required), example below |
  ```javascript
 {
   "comment": {
     "text": "My first comment",
     "user_id": 1,
-    "event_id": 1,
-    "flagged": true  /* optional */
+    "event_id": 1
   }
 }
-  ```
+ ```
 
 ## For test, run:
  ```
