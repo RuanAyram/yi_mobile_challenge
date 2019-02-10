@@ -13,6 +13,8 @@
 | :---: |:-------:|
 | [Rspec](https://github.com/rspec/rspec-rails) | Default tests |
 | [Rubocop](https://github.com/rubocop-hq/rubocop) | Static code analyzer and formatter |
+| [factory_bot_rails](https://github.com/thoughtbot/factory_bot_rails) | Setting up Ruby objects as test data |
+| [shoulda-matchers](https://github.com/thoughtbot/shoulda-matchers) | Simple one-liner tests |
 |  |  |
 | General | Version |
 | Ruby  | 2.5.1 |
